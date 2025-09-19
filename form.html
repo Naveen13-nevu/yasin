@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="dayForm">
+      <input type="text" id="dayInput" placeholder="Enter Your Name" />
+      <button type="Submit">Click</button>
+    </form>
+
+    <p id="result">Result</p>
+
+    <script>
+      document.getElementById("dayForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+          let day = document.getElementById("dayInput").value.toLowerCase();
+          let result = " ";
+
+          switch (day) {
+            case "monday":
+              result = "monday";
+              break;
+            case "tuesday":
+              result = "tuesday";
+              break;
+            case "wednesday":
+              result = "wednesday";
+
+              break;
+            case "thursday":
+              result = "thursday";
+              break;
+            case "friday":
+              result = "friday";
+              break;
+            case "saturday":
+              result = "saturday";
+              break;
+            case "sunday":
+              result = "sunday";
+              break;
+            default:
+              result = "Invalid Day";
+          }
+          document.getElementById("result").innerHTML=result;
+        });
+    </script>
+  </body>
+</html>
